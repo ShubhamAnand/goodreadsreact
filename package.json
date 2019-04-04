@@ -1,8 +1,6 @@
 {
-  "name": "goodreadsreact",
-  "version": "1.0.0",
-  "description": "This project makes use of goodread api & react to display books",
-  "main": "index.js",
+  "name": "goodreads-reactjs",
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
@@ -11,27 +9,16 @@
     "react-scripts": "1.1.5",
     "serve": "^9.4.0"
   },
-  "scripts": {
-    "dev": "react-scripts start",
-    "start": "serve -s build",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run build"
-  },
-  "engineStrict" : true,
+  "engineStrict": true,
   "engines": {
     "node": ">=10.15.3",
     "npm": ">=6.4.1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ShubhamAnand/goodreadsreact.git"
-  },
-  "author": "Shubham Anand",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ShubhamAnand/goodreadsreact/issues"
-  },
-  "homepage": "https://github.com/ShubhamAnand/goodreadsreact#readme"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "serve -s build -l 3000"
+  }
 }

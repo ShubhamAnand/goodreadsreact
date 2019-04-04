@@ -16,9 +16,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts start",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "heroku-postbuild": "serve -s build -l 3000"
+    "heroku-postbuild": "react-scripts start"
   }
 }

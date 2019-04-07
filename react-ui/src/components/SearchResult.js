@@ -1,12 +1,30 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Button from '@material-ui/core/Button';
+import Icon from '@material-ui/core/Icon';
+import classNames from 'classnames';
 
+const styles = theme => ({
+  button: {
+    margin: theme.spacing.unit,
+  },
+  block: {
+    display: 'block',
+  },
+  rightIcon: {
+    marginLeft: theme.spacing.unit,
+  },
+  iconSmall: {
+    fontSize: 8,
+  }
+});
 const SearchResult = ({ bookData, expandBook }) => {
   /**
    * truncate book title to first 4 words and append it with '...'
    * indicating it is truncated.
    * Full title will be shown in a tooltip
    */
+  
   const bookTitle = bookData.best_book.title;
   let displayTitle = bookTitle
     .split(" ")
@@ -37,13 +55,9 @@ const SearchResult = ({ bookData, expandBook }) => {
           <p className="text-sm-left card-text">
             {bookData.best_book.author.name}
           </p>
-
-          <button
-            className="btn btn-primary"
-            onClick={() => expandBook(bookData)}
-          >
-            More Info
-          </button>
+          <Button onClick={() => expandBook(bookData)} variant="contained" color="primary" className={styles.button}>
+          More&nbsp;&nbsp;<Icon className={classNames(styles.block,styles.rightIcon,styles.iconSmall)} color="inherit">send</Icon>
+          </Button>
         </div>
       </div>
     </div>

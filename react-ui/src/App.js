@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Search from "./components/Search";
 import BookInfo from "./components/BookInfo";
+import PrimarySearchAppBar from "./components/Header";
+import Footer from './components/Footer';
 
 class App extends Component {
   state = {
@@ -24,9 +26,12 @@ class App extends Component {
 
   render() {
     return (
+     <div>
+        <PrimarySearchAppBar/>
       <div className="container">
         <div className="header clearfix mt-5">
-          <h3 className="text-muted">Goodreads Book Search</h3>
+      
+          <h3 className="text-muted">Search from a collection of over 10,000,000 books</h3>
         </div>
         <div className="jumbotron">
           {this.state.expandedBook ? (
@@ -42,6 +47,8 @@ class App extends Component {
             />
           )}
         </div>
+      </div>
+      <Footer/>
       </div>
     );
   }

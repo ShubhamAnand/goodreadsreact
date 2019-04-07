@@ -1,8 +1,27 @@
 import React, { Component } from "react";
 import Axios from "axios";
 import PropTypes from "prop-types";
+import StarRatingComponent from 'react-star-rating-component';
+import Button from '@material-ui/core/Button';
+import Icon from '@material-ui/core/Icon';
+import classNames from 'classnames';
 
 const apiKey = process.env.REACT_APP_API_KEY;
+
+const styles = theme => ({
+  button: {
+    margin: theme.spacing.unit,
+  },
+  block: {
+    display: 'block',
+  },
+  rightIcon: {
+    marginLeft: theme.spacing.unit,
+  },
+  iconSmall: {
+    fontSize: 10,
+  }
+});
 
 class BookInfo extends Component {
   constructor(props) {
@@ -19,9 +38,7 @@ class BookInfo extends Component {
 
   getDescription = () => {
     const bookId = this.props.bookData.best_book.id;
-    const requestUri =
-      `https://gooodreadsreact.heroku.com/` +
-      `https://www.goodreads.com/book/show/${bookId}?key=${apiKey}`;
+    const requestUri =`https://cors-anywhere.herokuapp.com/`+`https://www.goodreads.com/book/show/${bookId}?key=${apiKey}`;
     Axios.get(requestUri)
       .then(res => {
         const parser = new DOMParser();
@@ -56,10 +73,9 @@ class BookInfo extends Component {
     const { bookData } = this.props;
     return (
       <div className="row col-lg-12">
-        <button className="btn btn-primary" onClick={this.props.collapseBook}>
-          {"<< Go Back"}
-        </button>
-
+       <Button onClick={this.props.collapseBook} variant="contained" color="primary" className={styles.button}>
+       <Icon className={classNames(styles.block,styles.rightIcon,styles.iconSmall)} color="inherit">arrow_back_ios</Icon> Go Back 
+          </Button>
         <h3 className="col-lg-12 mb-3 mt-3">{bookData.best_book.title}</h3>
         <div className="col-lg-2 col-sm-4 ">
           <img
@@ -74,7 +90,15 @@ class BookInfo extends Component {
               {bookData.best_book.author.name}
             </span>
           </p>
-          <p>Avg. Rating: {bookData.average_rating}</p>
+          <p>Avg. Rating:{bookData.average_rating}
+          <StarRatingComponent 
+          name="rate2" 
+          editing={false}
+          renderStarIcon={() => <span><Icon className={classNames(styles.block,styles.rightIcon,styles.iconSmall)} color="inherit">star</Icon></span>}
+          starCount={5}
+          value={bookData.average_rating}
+          />
+         </p>
         </div>
         <div className="col-lg-10 col-sm-8">
           {(this.state.error && (

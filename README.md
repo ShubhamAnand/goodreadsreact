@@ -1,12 +1,11 @@
-
-![home_page](https://user-images.githubusercontent.com/5261962/55689122-aa659680-599e-11e9-8b90-01a0a93659ef.PNG)
-
 # **Goodreads-Book-Search** React App with a Node server on Heroku
 
 A minimal example of using a Node backend (server for API, proxy, & routing) with a [React frontend](https://github.com/facebookincubator/create-react-app).
 This application uses goodreads api to look for books by title, author or isbn code.
 
 This project is deployed live at https://still-garden-60707.herokuapp.com/
+
+![home_page](https://user-images.githubusercontent.com/5261962/55689122-aa659680-599e-11e9-8b90-01a0a93659ef.PNG)
 
 To deploy a frontend-only React app, use the static-site optimized  
 ▶️ [create-react-app-buildpack](https://github.com/mars/create-react-app-buildpack)

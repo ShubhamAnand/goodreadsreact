@@ -6,6 +6,8 @@ This application uses goodreads api to look for books by title, author or isbn c
 This project is deployed live at https://still-garden-60707.herokuapp.com/
 
 ![home_page](https://user-images.githubusercontent.com/5261962/55689122-aa659680-599e-11e9-8b90-01a0a93659ef.PNG)
+![search_results_page](https://user-images.githubusercontent.com/5261962/55689192-4394ad00-599f-11e9-8b3e-20d8ae8ad8c5.PNG)
+![book_description](https://user-images.githubusercontent.com/5261962/55689193-47283400-599f-11e9-830e-7183f82b39fe.PNG)
 
 To deploy a frontend-only React app, use the static-site optimized  
 ▶️ [create-react-app-buildpack](https://github.com/mars/create-react-app-buildpack)

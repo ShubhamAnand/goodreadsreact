@@ -152,23 +152,25 @@ To build the production assets, run
 Right now there is only one test suite. (renders without crashing)
 
     npm test
+    
+```    
 
-# Features In Current Version 1:
+#### Features In Current Version:
 
 1. Search for books by title, author, or ISBN.
-2. Resets Search Query using Reset Otion provided.
-3. Displays upto 20 search results in Material UI cards.
-4. Displays title, author, and link to goodreads page.
-5. See the description and rating of book and brief details about book by clicking on individual result.
-6. Single Page Application with extensive caching, so application loads very fast post first load.
+2. Resets Search Query using Reset Option provided.
+3. Displays up to 20 search results in Material UI cards.
+4. Displays title, author, and link to Goodreads page.
+5. See the description and rating of the book and brief details about the book by clicking on an individual result.
+6. Single Page Application with extensive caching, so application loads very fast post the first load.
 
-# Future Implementation in more time:
+#### Future Implementation in more time:
 
 Some of the things that re left out due to time constraints but I will add them in future are:
 
 1. Writing Snapshot & Unit Tests for all components using Jest & Enzyme with >80% functional coverage 
 2. Ability to login to the Application using Single Sign in.
-3. Save favourite books by creating a like icon for personalized list of book for logged in user.
-4. Ability to follow author & provide notifications to user on latest books from Author.
+3. Save favorite books by creating a like icon for the personalized list of book for logged in user.
+4. Ability to follow author & provide notifications to the user on the latest books from followed Author.
+5. Better Responsive Support for Mobile devices & Adding fractional support for reviews.
 
-```
